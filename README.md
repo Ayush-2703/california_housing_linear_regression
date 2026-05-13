@@ -1,64 +1,76 @@
-# California Housing Linear Regression
-
-This repository contains a machine learning mini-project focused on predicting California housing prices using linear regression in Python.
-
-## Contents
-
-- `task1_ml_linear_regression.ipynb`: Jupyter notebook with data loading, exploratory data analysis, model training, evaluation, feature scaling, and a Random Forest extension.
-- `Linear_Regression_Report.pdf`: Project report summarizing the workflow and findings.
-
-## Project Overview
-
-The notebook uses the California Housing dataset from `scikit-learn` and walks through a standard regression workflow:
-
-- Load and inspect the dataset
-- Check shape, columns, null values, and descriptive statistics
-- Visualize distributions and feature correlations
-- Split the data into training and testing sets
-- Train a `LinearRegression` model
-- Evaluate performance using MAE, RMSE, and R2 score
-- Compare results after feature scaling
-- Save the trained model with `pickle`
-- Begin a comparison with `RandomForestRegressor`
-
-## Reported Linear Regression Results
-
-From the notebook output:
-
-- MAE: `0.5332`
-- RMSE: `0.7456`
-- R2 Score: `0.5758`
-
-The scaled linear regression model reports the same metrics, which is expected for ordinary least squares regression in this setup.
-
+# California Housing Price Prediction
+ 
+A machine learning mini-project that predicts California housing prices using Linear Regression and Random Forest in Python, built on the classic `scikit-learn` California Housing dataset.
+ 
+---
+ 
+## Project Structure
+ 
+```
+├── task1_ml_linear_regression.ipynb   # Main notebook (EDA, modeling, evaluation)
+└── Linear_Regression_Report.pdf       # Written summary of findings
+```
+ 
+---
+ 
+## Workflow
+ 
+The notebook walks through a complete regression pipeline:
+ 
+1. **Data Loading & Inspection** — shape, columns, null checks, and descriptive statistics
+2. **Exploratory Data Analysis** — distribution plots and feature correlation heatmap
+3. **Train/Test Split** — standard 80/20 partition
+4. **Model Training** — `LinearRegression` from scikit-learn
+5. **Evaluation** — MAE, RMSE, and R² score
+6. **Feature Scaling** — re-evaluating the model after scaling (results are identical for OLS, as expected)
+7. **Model Export** — saving the trained model via `pickle`
+8. **Random Forest Comparison** — initial `RandomForestRegressor` setup for benchmarking
+---
+ 
+## Results
+ 
+| Metric | Score |
+|--------|-------|
+| MAE | 0.5332 |
+| RMSE | 0.7456 |
+| R² | 0.5758 |
+ 
+> Scaled and unscaled linear regression produce identical metrics — expected behavior for ordinary least squares.
+ 
+---
+ 
 ## Tech Stack
-
-- Python
-- Jupyter Notebook
-- NumPy
-- pandas
-- matplotlib
-- seaborn
-- scikit-learn
-
-## How to Run
-
-1. Install the required Python libraries.
-2. Open `task1_ml_linear_regression.ipynb` in Jupyter Notebook or JupyterLab.
-3. Run the notebook cells in order.
-
-A quick install command is:
-
+ 
+| Tool | Purpose |
+|------|---------|
+| `pandas` / `numpy` | Data manipulation |
+| `matplotlib` / `seaborn` | Visualization |
+| `scikit-learn` | Modeling & evaluation |
+| `pickle` | Model serialization |
+| Jupyter Notebook | Interactive development |
+ 
+---
+ 
+## Getting Started
+ 
+**Install dependencies:**
+ 
 ```bash
 pip install numpy pandas matplotlib seaborn scikit-learn jupyter
 ```
-
+ 
+**Run the notebook:**
+ 
+```bash
+jupyter notebook task1_ml_linear_regression.ipynb
+```
+ 
+Run all cells in order. A `linear_regression_model.pkl` file will be saved locally once the model export cell executes.
+ 
+---
+ 
 ## Notes
-
-- The notebook includes a `pip install seaborn` cell at the top.
-- A model artifact may be generated locally as `linear_regression_model.pkl` when the notebook is executed.
-- The Random Forest section is present in the notebook, but its final evaluation output is not captured in the saved notebook output.
-
-## License
-
-This project is licensed under the MIT License.
+ 
+- A `pip install seaborn` cell is included at the top of the notebook for convenience.
+- The Random Forest section is present in the notebook but its evaluation output was not captured in the saved state — re-run the notebook to generate it.
+ 
