@@ -1,0 +1,4 @@
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+linear_regression_model.pkl
